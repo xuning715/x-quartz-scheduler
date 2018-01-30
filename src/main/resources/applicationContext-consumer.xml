@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+                           http://code.alibabatech.com/schema/dubbo
+                           http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <dubbo:application name="${applicationName}" />
+    <dubbo:registry id="quartz-scheduler-consumer" protocol="zookeeper" address="${zookeeperAddress}" timeout="5000" />
+    <dubbo:consumer timeout="5000" retries="3" check="false" connections="10" lazy="true" />
+    <dubbo:reference registry="quartz-scheduler-consumer" id="carAgeRpcService" interface="com.x.erp.rpc.CarAgeRpcService" />
+    <dubbo:reference registry="quartz-scheduler-consumer" id="stockAgeRpcService" interface="com.x.erp.rpc.StockAgeRpcService" />
+
+</beans>

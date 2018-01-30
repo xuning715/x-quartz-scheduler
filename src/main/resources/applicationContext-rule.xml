@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <bean id="updateCarAgeTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="carAgeRpcService" />
+        </property>
+        <property name="methodName">
+            <value>updateCarAgeTask</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.erp.model.CarAge</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <bean class="com.x.erp.model.CarAge"></bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="updateStockAgeTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="stockAgeRpcService" />
+        </property>
+        <property name="methodName">
+            <value>updateStockAgeTask</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.erp.model.StockAge</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <bean class="com.x.erp.model.StockAge"></bean>
+            </list>
+        </property>
+    </bean>
+
+    <!--<bean id="restMonitor1" class="com.x.scheduler.job.Monitor">-->
+        <!--<property name="redisTemplate">-->
+            <!--<ref bean="redisTemplate"/>-->
+        <!--</property>-->
+        <!--<property name="request">-->
+            <!--<bean class="com.x.scheduler.model.Request">-->
+                <!--<property name="requestId">-->
+                    <!--<value>requestId1</value>-->
+                <!--</property>-->
+                <!--<property name="requestName">-->
+                    <!--<value>requestName1</value>-->
+                <!--</property>-->
+                <!--<property name="requestLevel">-->
+                    <!--<value>1</value>-->
+                <!--</property>-->
+                <!--<property name="requestUrl">-->
+                    <!--<value><![CDATA[http://localhost:8080/quartz-scheduler/rest.jsp]]></value>-->
+                <!--</property>-->
+                <!--<property name="requestParamJson">-->
+                    <!--<value><![CDATA[{"name":"xxx"}]]></value>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</property>-->
+	    <!--<property name="client">-->
+	        <!--<ref bean="restClient"/>-->
+	    <!--</property>-->
+        <!--<property name="ruleEngine">-->
+            <!--<bean class="com.x.scheduler.job.RuleEngine">-->
+                <!--<property name="rules">-->
+                    <!--<list>-->
+                       <!--<value><![CDATA[('age' > '26' && 'age' < '28') || 'name' == 'xxx']]></value>-->
+                    <!--</list>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</property>-->
+    <!--</bean>-->
+    
+    <!--<bean id="sqlMonitor1" class="com.x.scheduler.job.Monitor">-->
+        <!--<property name="redisTemplate">-->
+            <!--<ref bean="redisTemplate"/>-->
+        <!--</property>-->
+        <!--<property name="request">-->
+            <!--<bean class="com.x.scheduler.model.Request">-->
+                <!--<property name="requestId">-->
+                    <!--<value>requestId2</value>-->
+                <!--</property>-->
+                <!--<property name="requestName">-->
+                    <!--<value>requestName2</value>-->
+                <!--</property>-->
+                <!--<property name="requestLevel">-->
+                    <!--<value>2</value>-->
+                <!--</property>-->
+                <!--<property name="requestUrl">-->
+                    <!--<value><![CDATA[select 1 as NUM]]></value>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</property>-->
+        <!--<property name="client">-->
+            <!--<ref bean="sqlClient"/>-->
+        <!--</property>-->
+        <!--<property name="ruleEngine">-->
+            <!--<bean class="com.x.scheduler.job.RuleEngine">-->
+                <!--<property name="rules">-->
+                    <!--<list>-->
+                       <!--<value><![CDATA['NUM' > '3']]></value>-->
+                    <!--</list>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+</beans>

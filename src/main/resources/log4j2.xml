@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <properties>
+        <property name="LOG_HOME">../logs/quartz-scheduler</property>
+        <property name="INFO_LOG_NAME">info</property>
+        <property name="ERROR_LOG_NAME">error</property>
+    </properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <RollingRandomAccessFile name="ErrorLog" fileName="${LOG_HOME}/${ERROR_LOG_NAME}.log" filePattern="${LOG_HOME}/${ERROR_LOG_NAME}.log.%d{yyyy-MM-dd}.gz">
+            <PatternLayout pattern="%d %-5p (%F:%L) - %m%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="5 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingRandomAccessFile>
+    </Appenders>
+    <Loggers>
+        <root level="error">
+            <appender-ref ref="Console" />
+        </root>
+        <logger name="org.directwebremoting" level="error"/>
+        <logger name="com.x" level="info" includeLocation="true">
+            <appender-ref ref="ErrorLog" />
+        </logger>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+					    http://www.springframework.org/schema/beans/spring-beans.xsd
+					    http://www.springframework.org/schema/context
+					    http://www.springframework.org/schema/context/spring-context.xsd
+					    http://www.springframework.org/schema/aop
+					    http://www.springframework.org/schema/aop/spring-aop.xsd">
+    
+    <bean id="loadPackageClasses" class="com.x.util.LoadPackageClasses" init-method="getInstance"/>
+    
+    <context:component-scan base-package="com.x.quartz">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
+    </context:component-scan>
+    
+    <context:annotation-config />
+    
+    <context:component-scan base-package="com.x.quartz.job" />
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+    <!-- ======================== 调度工厂 ======================== -->
+    <!-- 默认使用classpath:quartz.properties初始化Scheduler -->
+    <bean id="springJobSchedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <!-- 将Job交由Spring管理 -->
+        <property name="jobFactory">
+            <bean class="com.x.quartz.job.SpringJobBeanFactory" />
+        </property>
+        <!-- 数据源 -->
+        <property name="dataSource" ref="quartzSchedulerDataSource"></property>
+        <property name="overwriteExistingJobs" value="true"></property>
+        <!-- 自启动 -->
+        <property name="autoStartup" value="true"></property>
+        <property name="configLocation" value="classpath:./quartz.properties"></property>
+    </bean>
+    
+    <!-- Quartz管理类 -->
+    <bean id="quartzManager" class="com.x.quartz.manager.QuartzManager">
+        <property name="scheduler" ref="springJobSchedulerFactoryBean"></property>
+    </bean>
+    
+</beans>
