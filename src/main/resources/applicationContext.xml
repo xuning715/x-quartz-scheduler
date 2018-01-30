@@ -11,6 +11,7 @@
         </property>
         <property name="ignoreUnresolvablePlaceholders" value="true" />
     </bean>
+    <import resource="applicationContext-executor.xml" />
     <import resource="applicationContext-consumer.xml" />
     <import resource="applicationContext-db.xml" />
     <import resource="applicationContext-rule.xml" />
