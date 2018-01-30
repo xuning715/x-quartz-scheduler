@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project name="quartz-scheduler" default="build" basedir=".">
+    <property name="classes.source" value="E:/xspace/x-quartz-scheduler/target/classes"/>
+    <property name="classes.dest" value="D:/Tomcat7/webapps/quartz-scheduler/WEB-INF/classes"/>
+    <property name="webapp.source" value="E:/xspace/x-quartz-scheduler/src/main/webapp"/>
+    <property name="webapp.dest" value="D:/Tomcat7/webapps/quartz-scheduler"/>
+    <target name="build">
+        <copy todir="${webapp.dest}">
+            <fileset dir="${webapp.source}"/>
+        </copy>
+        <copy todir="${classes.dest}">
+            <fileset dir="${classes.source}"/>
+        </copy>
+    </target>
+</project>
