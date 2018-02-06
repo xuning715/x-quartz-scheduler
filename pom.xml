@@ -62,7 +62,7 @@
         </dependency>
         <dependency>
             <groupId>com.x</groupId>
-            <artifactId>ewalker-api</artifactId>
+            <artifactId>erp-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
