@@ -6,10 +6,11 @@
                            http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
                            http://code.alibabatech.com/schema/dubbo
                            http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-    <dubbo:application name="${applicationName}" />
+<dubbo:application name="${applicationName}" />
     <dubbo:registry id="quartz-scheduler-consumer" protocol="zookeeper" address="${zookeeperAddress}" timeout="5000" />
-    <dubbo:consumer timeout="5000" retries="3" check="false" connections="10" lazy="true" />
+    <dubbo:consumer client="netty4" timeout="5000" retries="3" check="false" connections="10" lazy="true" />
     <dubbo:reference registry="quartz-scheduler-consumer" id="carAgeRpcService" interface="com.x.erp.rpc.CarAgeRpcService" />
     <dubbo:reference registry="quartz-scheduler-consumer" id="stockAgeRpcService" interface="com.x.erp.rpc.StockAgeRpcService" />
+    <dubbo:reference registry="quartz-scheduler-consumer" id="carOutRpcService" interface="com.x.erp.rpc.CarOutRpcService" />
 
 </beans>

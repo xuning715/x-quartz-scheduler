@@ -4,6 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 
+    <bean id="carAge" class="com.x.erp.model.CarAge"></bean>
+    <bean id="stockAge" class="com.x.erp.model.StockAge"></bean>
+    <bean id="carOut" class="com.x.erp.model.CarOut"></bean>
+
     <bean id="updateCarAgeTask" class="com.x.scheduler.job.RpcJob">
         <property name="rpcService">
             <ref bean="carAgeRpcService" />
@@ -18,7 +22,7 @@
         </property>
         <property name="paramValueArray">
             <list>
-                <bean class="com.x.erp.model.CarAge"></bean>
+                <ref bean="carAge" />
             </list>
         </property>
     </bean>
@@ -37,7 +41,26 @@
         </property>
         <property name="paramValueArray">
             <list>
-                <bean class="com.x.erp.model.StockAge"></bean>
+                <ref bean="stockAge" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="sendMsgCarOutOvertimeTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="carOutRpcService" />
+        </property>
+        <property name="methodName">
+            <value>sendMsgCarOutOvertimeTask</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.erp.model.CarOut</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="carOut" />
             </list>
         </property>
     </bean>
