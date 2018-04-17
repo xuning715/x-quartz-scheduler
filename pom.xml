@@ -1,5 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>xframework-web</artifactId>
         <groupId>com.x</groupId>
@@ -13,7 +15,8 @@
 
     <properties>
         <hibernate.version>5.1.0.Final</hibernate.version>
-        <httpclient.version>4.3.1</httpclient.version>
+        <quartz.version>2.3.0</quartz.version>
+        <jdk.version>1.8</jdk.version>
     </properties>
 
     <build>
@@ -55,20 +58,15 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>com.x</groupId>
-            <artifactId>xframework</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.x</groupId>-->
+            <!--<artifactId>xframework</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.x</groupId>
             <artifactId>erp-api</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-jexl</artifactId>
-            <version>2.1.1</version>
         </dependency>
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
@@ -118,6 +116,16 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz-jobs</artifactId>
+            <version>${quartz.version}</version>
         </dependency>
         <!-- Hibernate End -->
         <!--<dependency>-->
