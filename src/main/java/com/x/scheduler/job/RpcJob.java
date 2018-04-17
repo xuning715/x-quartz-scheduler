@@ -18,7 +18,6 @@ public class RpcJob extends AbstractJob {
     private Object[] paramValueArray;
 
     public RpcJob() {
-        logger.info("============================RpcJob is inited==============================");
     }
 
     public void setRpcService(BaseRpcService rpcService) {
@@ -27,6 +26,7 @@ public class RpcJob extends AbstractJob {
 
     public void setMethodName(String methodName) {
         this.methodName = methodName;
+        logger.info(methodName + "============================RpcJob is inited==============================");
     }
 
     public void setParamTypeArray(String[] paramTypeArray) throws ClassNotFoundException {
