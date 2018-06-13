@@ -12,5 +12,6 @@
     <dubbo:reference registry="quartz-scheduler-consumer" id="carAgeRpcService" interface="com.x.erp.rpc.CarAgeRpcService" />
     <dubbo:reference registry="quartz-scheduler-consumer" id="stockAgeRpcService" interface="com.x.erp.rpc.StockAgeRpcService" />
     <dubbo:reference registry="quartz-scheduler-consumer" id="carOutRpcService" interface="com.x.erp.rpc.CarOutRpcService" />
+    <dubbo:reference registry="quartz-scheduler-consumer" id="contractRpcService" interface="com.x.erp.rpc.ContractRpcService" />
 
 </beans>
