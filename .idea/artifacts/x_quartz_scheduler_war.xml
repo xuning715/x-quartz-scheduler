@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="x-quartz-scheduler:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="quartz-scheduler.war">
+      <element id="artifact" artifact-name="x-quartz-scheduler:war exploded" />
+    </root>
+  </artifact>
+</component>
