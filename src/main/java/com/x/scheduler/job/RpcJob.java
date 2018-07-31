@@ -3,14 +3,14 @@ package com.x.scheduler.job;
 import com.x.quartz.job.AbstractJob;
 import com.x.quartz.job.Job;
 import com.x.framework.rpc.BaseRpcService;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Method;
 
 @Job
 public class RpcJob extends AbstractJob {
-    private final Logger logger = LogManager.getLogger(RpcJob.class);
+    private static final Logger logger = LoggerFactory.getLogger(RpcJob.class);
 
     private BaseRpcService rpcService;
     private String methodName;
@@ -54,7 +54,7 @@ public class RpcJob extends AbstractJob {
             Method method = rpcService.getClass().getMethod(methodName, paramTypeArray);
             Object returnValue = method.invoke(rpcService, paramValueArray);
         } catch (Exception e) {
-            logger.error(e);
+            logger.error("", e);
         }
         this.response();
     }

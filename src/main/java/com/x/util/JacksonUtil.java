@@ -10,8 +10,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.JsonParser;
@@ -24,10 +22,12 @@ import org.codehaus.jackson.map.ser.impl.SimpleBeanPropertyFilter;
 import org.codehaus.jackson.map.ser.impl.SimpleFilterProvider;
 import org.codehaus.jackson.map.type.TypeFactory;
 import org.codehaus.jackson.type.JavaType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class JacksonUtil {
 
-	private static final Logger logger = LogManager.getLogger(JacksonUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(JacksonUtil.class);
 
 	private static ObjectMapper objectMapper;
 

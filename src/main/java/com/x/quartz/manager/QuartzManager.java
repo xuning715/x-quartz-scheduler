@@ -9,8 +9,6 @@ import java.util.Map;
 import java.util.Set;
 
 import com.x.framework.Base;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
 import org.quartz.Job;
@@ -24,6 +22,8 @@ import org.quartz.Trigger.TriggerState;
 import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
 import org.quartz.impl.matchers.GroupMatcher;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 /**
@@ -41,7 +41,7 @@ import org.springframework.util.StringUtils;
  */
 public class QuartzManager extends Base {
 
-	private final static Logger logger = LogManager.getLogger(QuartzManager.class);
+    private static final Logger logger = LoggerFactory.getLogger(QuartzManager.class);
 
 	public static final String DEFAULT_DATEFORMAT_PATTERN = "yyyy-MM-dd HH:mm:ss";
 

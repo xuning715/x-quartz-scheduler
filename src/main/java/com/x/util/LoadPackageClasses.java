@@ -7,8 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -29,7 +29,7 @@ import com.x.quartz.job.Job;
  */
 public class LoadPackageClasses {
 
-	private final Logger logger = LogManager.getLogger(getClass());
+    private static final Logger logger = LoggerFactory.getLogger(LoadPackageClasses.class);
 
 	private static final String RESOURCE_PATTERN = "/**/*.class";
 
