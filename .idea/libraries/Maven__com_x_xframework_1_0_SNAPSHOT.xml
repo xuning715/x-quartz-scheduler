@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.x:xframework:1.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/x/xframework/1.0-SNAPSHOT/xframework-1.0-20180503.024911-36.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/x/xframework/1.0-SNAPSHOT/xframework-1.0-20180726.082127-39.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/com/x/xframework/1.0-SNAPSHOT/xframework-1.0-20180503.024911-36-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/x/xframework/1.0-SNAPSHOT/xframework-1.0-20180726.082127-39-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/x/xframework/1.0-SNAPSHOT/xframework-1.0-20180503.024911-36-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/x/xframework/1.0-SNAPSHOT/xframework-1.0-20180726.082127-39-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
