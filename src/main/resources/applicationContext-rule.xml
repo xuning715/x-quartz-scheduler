@@ -8,6 +8,8 @@
     <bean id="stockAge" class="com.x.erp.model.StockAge"></bean>
     <bean id="carOut" class="com.x.erp.model.CarOut"></bean>
     <bean id="contract" class="com.x.erp.model.Contract"></bean>
+    <bean id="multilevelActivity" class="com.x.erp.model.MultilevelActivity"></bean>
+    <bean id="mortgageTask" class="com.x.finance.model.MortgageTask"></bean>
 
     <bean id="updateCarAgeTask" class="com.x.scheduler.job.RpcJob">
         <property name="rpcService">
@@ -84,6 +86,45 @@
             </list>
         </property>
     </bean>
+
+    <bean id="updateMultilevelActivityEndTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="multilevelActivityRpcService" />
+        </property>
+        <property name="methodName">
+            <value>updateMultilevelActivityEnd</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.erp.model.MultilevelActivity</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="multilevelActivity" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="insertInspectionWorkTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="mortgageTaskRpcService" />
+        </property>
+        <property name="methodName">
+            <value>insertInspectionWork</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.finance.model.MortgageTask</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="mortgageTask" />
+            </list>
+        </property>
+    </bean>
+
     <!--<bean id="restMonitor1" class="com.x.scheduler.job.Monitor">-->
         <!--<property name="redisTemplate">-->
             <!--<ref bean="redisTemplate"/>-->
