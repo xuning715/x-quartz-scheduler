@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.x:erp-api:1.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/x/erp-api/1.0-SNAPSHOT/erp-api-1.0-20180809.084625-237.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/x/erp-api/1.0-SNAPSHOT/erp-api-1.0-20180904.072712-256.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/com/x/erp-api/1.0-SNAPSHOT/erp-api-1.0-20180809.084625-237-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/x/erp-api/1.0-SNAPSHOT/erp-api-1.0-20180904.072712-256-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/x/erp-api/1.0-SNAPSHOT/erp-api-1.0-20180809.084625-237-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/x/erp-api/1.0-SNAPSHOT/erp-api-1.0-20180904.072712-256-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

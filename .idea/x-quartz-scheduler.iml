@@ -22,7 +22,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.x:erp-api:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.x:spider-api:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.x:xframework-api:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.x:xframework:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-jexl:2.1.1" level="project" />
@@ -33,6 +33,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.2.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.vdurmont:emoji-java:4.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20080701" level="project" />
+    <orderEntry type="library" name="Maven: com.x:erp-api:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.x:finance-api:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.thoughtworks.xstream:xstream:1.4.9" level="project" />
     <orderEntry type="library" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
