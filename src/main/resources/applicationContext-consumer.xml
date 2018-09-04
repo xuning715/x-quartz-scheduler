@@ -14,6 +14,8 @@
     <dubbo:reference registry="quartz-scheduler-consumer" id="carOutRpcService" interface="com.x.erp.rpc.CarOutRpcService" />
     <dubbo:reference registry="quartz-scheduler-consumer" id="multilevelActivityRpcService" interface="com.x.erp.rpc.MultilevelActivityRpcService" />
     <dubbo:reference registry="quartz-scheduler-consumer" id="contractRpcService" interface="com.x.erp.rpc.ContractRpcService" />
-    <dubbo:reference registry="quartz-scheduler-consumer" id="mortgageTaskRpcService" interface="com.x.erp.rpc.MortgageTaskRpcService" />
+    <dubbo:reference registry="quartz-scheduler-consumer" id="mortgageTaskRpcService" interface="com.x.finance.rpc.MortgageTaskRpcService" />
+    <dubbo:reference registry="quartz-scheduler-consumer" id="spiderCarRpcService" interface="com.x.spider.rpc.SpiderCarRpcService" />
+    <dubbo:reference registry="quartz-scheduler-consumer" id="spiderPriceAvgRpcService" interface="com.x.erp.rpc.SpiderPriceAvgRpcService" />
 
 </beans>

@@ -10,6 +10,8 @@
     <bean id="contract" class="com.x.erp.model.Contract"></bean>
     <bean id="multilevelActivity" class="com.x.erp.model.MultilevelActivity"></bean>
     <bean id="mortgageTask" class="com.x.finance.model.MortgageTask"></bean>
+    <bean id="baseObject" class="com.x.framework.model.BaseObject"></bean>
+    <bean id="spiderPriceAvg" class="com.x.erp.model.SpiderPriceAvg"></bean>
 
     <bean id="updateCarAgeTask" class="com.x.scheduler.job.RpcJob">
         <property name="rpcService">
@@ -125,7 +127,159 @@
         </property>
     </bean>
 
-    <!--<bean id="restMonitor1" class="com.x.scheduler.job.Monitor">-->
+	<bean id="spider58CarTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="spiderCarRpcService" />
+        </property>
+        <property name="methodName">
+            <value>spider58Car</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.framework.model.BaseObject</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="baseObject" />
+            </list>
+        </property>
+    </bean>
+
+
+	<bean id="spiderChe168Task" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="spiderCarRpcService" />
+        </property>
+        <property name="methodName">
+            <value>spiderChe168</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.framework.model.BaseObject</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="baseObject" />
+            </list>
+        </property>
+    </bean>
+
+	<bean id="spiderFirstCarTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="spiderCarRpcService" />
+        </property>
+        <property name="methodName">
+            <value>spiderFirstCar</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.framework.model.BaseObject</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="baseObject" />
+            </list>
+        </property>
+    </bean>
+
+	<bean id="spiderGuaZiCarTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="spiderCarRpcService" />
+        </property>
+        <property name="methodName">
+            <value>spiderGuaZiCar</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.framework.model.BaseObject</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="baseObject" />
+            </list>
+        </property>
+    </bean>
+
+	<bean id="spiderRenRenCarTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="spiderCarRpcService" />
+        </property>
+        <property name="methodName">
+            <value>spiderRenRenCar</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.framework.model.BaseObject</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="baseObject" />
+            </list>
+        </property>
+    </bean>
+
+	<bean id="spiderSouhuCarTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="spiderCarRpcService" />
+        </property>
+        <property name="methodName">
+            <value>spiderSouhuCar</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.framework.model.BaseObject</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="baseObject" />
+            </list>
+        </property>
+    </bean>
+
+	<bean id="spiderYouXinCarTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="spiderCarRpcService" />
+        </property>
+        <property name="methodName">
+            <value>spiderYouXinCar</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.framework.model.BaseObject</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="baseObject" />
+            </list>
+        </property>
+    </bean>
+
+	<bean id="insertSpiderPriceAvgListTask" class="com.x.scheduler.job.RpcJob">
+        <property name="rpcService">
+            <ref bean="spiderPriceAvgRpcService" />
+        </property>
+        <property name="methodName">
+            <value>insertSpiderPriceAvgList</value>
+        </property>
+        <property name="paramTypeArray">
+            <list>
+                <value>com.x.erp.model.SpiderPriceAvg</value>
+            </list>
+        </property>
+        <property name="paramValueArray">
+            <list>
+                <ref bean="spiderPriceAvg" />
+            </list>
+        </property>
+    </bean>
+	<!--<bean id="restMonitor1" class="com.x.scheduler.job.Monitor">-->
         <!--<property name="redisTemplate">-->
             <!--<ref bean="redisTemplate"/>-->
         <!--</property>-->
