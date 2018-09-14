@@ -18,21 +18,6 @@
         <jdk.version>1.8</jdk.version>
     </properties>
 
-    <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
-        <plugins>
-            <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
-                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                </configuration>
-            </plugin>
-        </plugins>
-        <finalName>quartz-scheduler</finalName>
-    </build>
-
     <dependencies>
         <dependency>
             <groupId>com.x</groupId>
