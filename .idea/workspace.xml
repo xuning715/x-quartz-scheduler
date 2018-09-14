@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="621c7e1b-3eb9-4193-a98b-7f0362c494e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="621c7e1b-3eb9-4193-a98b-7f0362c494e6" name="Default" comment="" />
     <ignored path="x-quartz-scheduler.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -677,7 +675,7 @@
       <workItem from="1536906597550" duration="143000" />
       <workItem from="1536906866852" duration="128000" />
       <workItem from="1536907043664" duration="11000" />
-      <workItem from="1536907643403" duration="206000" />
+      <workItem from="1536907643403" duration="313000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1517313841807</created>
@@ -795,7 +793,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27689000" />
+    <option name="totallyTimeSpent" value="27796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
