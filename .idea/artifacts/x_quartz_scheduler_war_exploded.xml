@@ -8,14 +8,13 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.x:spider-api:1.0-SNAPSHOT" />
-          <element id="library" level="project" name="Maven: com.x:xframework-api:1.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.x:xframework:1.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-jexl:2.1.1" />
           <element id="library" level="project" name="Maven: commons-daemon:commons-daemon:1.1.0" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.9" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.29" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.0.5.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: com.vdurmont:emoji-java:4.0.0" />
           <element id="library" level="project" name="Maven: org.json:json:20080701" />
           <element id="library" level="project" name="Maven: com.x:erp-api:1.0-SNAPSHOT" />
@@ -74,16 +73,7 @@
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.9" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpmime:4.5.5" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.5" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.5" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.5" />
-          <element id="library" level="project" name="Maven: redis.clients:jedis:2.9.0" />
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
-          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.9.1" />
-          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.9.1" />
-          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-web:2.9.1" />
-          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.9.1" />
-          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-jcl:2.9.1" />
           <element id="library" level="project" name="Maven: io.netty:netty-all:4.1.22.Final" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aspects:5.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.0.5.RELEASE" />
@@ -92,15 +82,24 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-oxm:5.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.0.5.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-redis:1.7.11.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-keyvalue:1.1.11.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.12.11.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.session:spring-session:1.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
           <element id="library" level="project" name="Maven: com.101tec:zkclient:0.10" />
           <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.4.11" />
           <element id="library" level="project" name="Maven: com.x:xframework-redis:1.0-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: redis.clients:jedis:2.9.0" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-redis:1.7.11.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-keyvalue:1.1.11.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.12.11.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.6" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.6" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.9.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.9.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-jcl:2.9.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-web:2.9.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.9.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
