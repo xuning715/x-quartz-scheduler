@@ -5,10 +5,10 @@ import java.util.Map;
 
 import com.x.framework.annotation.MappingColumn;
 import com.x.framework.annotation.MappingTable;
-import com.x.framework.model.BaseObject;
+import com.x.framework.model.BaseModel;
 
 @MappingTable(tableName = "MONITOR_RESPONSE")
-public class Response extends BaseObject {
+public class Response extends BaseModel {
 	@MappingColumn(columnName = "RESPONSE_ID", columnPk = true)
 	private String responseId;
 	

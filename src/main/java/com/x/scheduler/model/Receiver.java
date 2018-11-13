@@ -2,10 +2,10 @@ package com.x.scheduler.model;
 
 import com.x.framework.annotation.MappingColumn;
 import com.x.framework.annotation.MappingTable;
-import com.x.framework.model.BaseObject;
+import com.x.framework.model.BaseModel;
 
 @MappingTable(tableName = "MONITOR_RECEIVER")
-public class Receiver extends BaseObject {
+public class Receiver extends BaseModel {
 
 	@MappingColumn(columnName = "RECEIVER_ID", columnPk = true)
 	private String receiverId;

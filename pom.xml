@@ -19,19 +19,24 @@
     </properties>
 
     <dependencies>
+        <!--<dependency>-->
+        <!--<groupId>com.x</groupId>-->
+        <!--<artifactId>spider-api</artifactId>-->
+        <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.x</groupId>-->
+        <!--<artifactId>erp-api</artifactId>-->
+        <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.x</groupId>-->
+        <!--<artifactId>finance-api</artifactId>-->
+        <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.x</groupId>
-            <artifactId>spider-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.x</groupId>
-            <artifactId>erp-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.x</groupId>
-            <artifactId>finance-api</artifactId>
+            <artifactId>xframework</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -95,10 +100,10 @@
         </dependency>
         <!-- Hibernate End -->
         <!--<dependency>-->
-            <!--<groupId>cognitivej</groupId>-->
-            <!--<artifactId>cognitivej</artifactId>-->
-            <!--<version>0.6.2</version>-->
-            <!--<type>pom</type>-->
+        <!--<groupId>cognitivej</groupId>-->
+        <!--<artifactId>cognitivej</artifactId>-->
+        <!--<version>0.6.2</version>-->
+        <!--<type>pom</type>-->
         <!--</dependency>-->
     </dependencies>
 </project>

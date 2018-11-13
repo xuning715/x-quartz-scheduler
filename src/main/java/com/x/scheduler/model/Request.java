@@ -4,10 +4,10 @@ import java.util.Date;
 
 import com.x.framework.annotation.MappingColumn;
 import com.x.framework.annotation.MappingTable;
-import com.x.framework.model.BaseObject;
+import com.x.framework.model.BaseModel;
 
 @MappingTable(tableName = "MONITOR_REQUEST")
-public class Request extends BaseObject {
+public class Request extends BaseModel {
 	@MappingColumn(columnName = "REQUEST_ID", columnPk = true)
 	private String requestId;
 	
